@@ -10,7 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Image("riga")
+            .resizable()
+            .frame(width: 400, height: 400)
+            .aspectRatio(contentMode: .fit)
+            //
+            .overlay(InfoView(), alignment: .trailing)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
